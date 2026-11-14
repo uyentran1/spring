@@ -1,5 +1,8 @@
 package com.uyentran.learning.spring;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BubbleSortAlgorithm implements SortAlgorithm {
     public int[] sort(int[] numbers) {
         // Logic for bubble sort...
