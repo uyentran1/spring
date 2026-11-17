@@ -1,15 +1,14 @@
 package com.uyentran.learning.spring;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 
-    @Autowired
-    private SortAlgorithm sortAlgorithm;
+    private final SortAlgorithm sortAlgorithm;
 
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+    public BinarySearchImpl(@Qualifier("quick-sort") SortAlgorithm sortAlgorithm) {
         super();
         this.sortAlgorithm = sortAlgorithm;
     }

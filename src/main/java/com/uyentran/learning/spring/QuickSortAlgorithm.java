@@ -1,10 +1,10 @@
 package com.uyentran.learning.spring;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-@Primary
+@Qualifier("quick-sort")
 public class QuickSortAlgorithm implements SortAlgorithm {
     public int[] sort(int[] numbers) {
         // Logic for quick sort...
