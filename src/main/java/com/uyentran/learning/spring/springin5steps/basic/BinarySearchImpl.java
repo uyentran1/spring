@@ -1,4 +1,4 @@
-package com.uyentran.learning.spring;
+package com.uyentran.learning.spring.springin5steps.basic;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;

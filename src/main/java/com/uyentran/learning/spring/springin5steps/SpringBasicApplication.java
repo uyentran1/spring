@@ -1,11 +1,14 @@
-package com.uyentran.learning.spring;
+package com.uyentran.learning.spring.springin5steps;
 
+import com.uyentran.learning.spring.springin5steps.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class Application {
+@ComponentScan("com.uyentran.learning.spring.componentscan")
+public class SpringBasicApplication {
 	// We need to tell Spring 3 things:
 	// What are the beans? --> We add @Component
 	// What are the dependencies of a bean? --> We add @Autowired
@@ -17,7 +20,7 @@ public class Application {
 
 		// Beans are created and managed by ApplicationContext
 		ApplicationContext applicationContext =
-				SpringApplication.run(Application.class, args);
+				SpringApplication.run(SpringBasicApplication.class, args);
 		BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
 		BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);
 		System.out.println(binarySearch);
