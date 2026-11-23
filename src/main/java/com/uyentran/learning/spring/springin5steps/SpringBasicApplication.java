@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.uyentran.learning.spring.componentscan")
+@ComponentScan("com.uyentran.learning.spring")
 public class SpringBasicApplication {
 	// We need to tell Spring 3 things:
 	// What are the beans? --> We add @Component
